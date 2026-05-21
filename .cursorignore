@@ -1,3 +1,6 @@
-# Sekrety
+# Sekrety i dane osobowe
 .env
 .env.*
+diagnoza_surowe_dane.local.json
+diagnoza_raport.md
+diagnoza_wyniki.json
