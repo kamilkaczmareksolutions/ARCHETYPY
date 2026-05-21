@@ -27,7 +27,7 @@ Nie musisz nic konfigurować poza otwarciem projektu — stan ankiety to zawsze 
 | `diagnoza_surowe_dane.json` | Tak (pusty `[]`) | Twoje odpowiedzi — **nie wrzucaj na GitHub z wypełnioną treścią** |
 | `diagnoza_raport.md` | Nie (`.gitignore`) | Raport końcowy — generowany lokalnie |
 | `diagnoza_wyniki.json` | Nie (`.gitignore`) | Opcjonalne metryki Fazy 2 |
-| `diagnoza_surowe_dane.local.json` | Nie (`.gitignore`) | Opcjonalna kopia zapasowa / eksport |
+| `diagnoza_surowe_dane.local.json` | Nie (`.gitignore`) | Kopia zapasowa postępu (tworzona przy końcu sesji) |
 
 ### Format wpisu w JSON
 
@@ -44,6 +44,20 @@ Zapis z terminala:
 ```bash
 python scripts/zapisz_odpowiedz.py 1 "Treść pytania" "Twoja odpowiedź"
 ```
+
+## Koniec pracy na dziś (backup)
+
+Ankieta **nie musi** być skończona w jednej sesji — możesz odpowiedzieć np. tylko na 3 pytania i wrócić jutro. Gdy kończysz na dziś, napisz agentowi wprost, np. *„na dziś tyle”*, *„dobranoc”*, *„wrócę jutro”*.
+
+Agent **automatycznie** zrobi kopię zapasową:
+
+```bash
+python scripts/backup_diagnoza.py
+```
+
+→ zapis do `diagnoza_surowe_dane.local.json` (poza Gitem). Przy następnym starcie kontynuujesz od pierwszego brakującego pytania w `diagnoza_surowe_dane.json`.
+
+Backup możesz też odpalić ręcznie w każdej chwili (np. przed aktualizacją systemu).
 
 ## MCP (opcjonalnie, zalecane)
 
@@ -71,6 +85,7 @@ ARCHETYPY/
 ├── PROMPT_SYSTEMOWY.md      # Kanoniczna instrukcja agenta
 ├── diagnoza_surowe_dane.json # Stan ankiety (start: [])
 ├── scripts/zapisz_odpowiedz.py
+├── scripts/backup_diagnoza.py
 ├── dane/
 ├── .cursor/
 │   ├── rules/               # Fazy 1 i 2, źródła
