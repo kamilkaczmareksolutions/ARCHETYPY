@@ -68,9 +68,18 @@ Backup możesz też odpalić ręcznie w każdej chwili (np. przed aktualizacją 
 
 | Plik | Zawartość |
 |------|-----------|
-| `raport.md` | 100 pytań + materiał do Fazy 2 |
-| `transkrypcja_film.md` | Kontekst współczesny (ojcostwo, praca, relacje) |
-| `*.pdf` | **Nie w repozytorium** — dodaj własną kopię książki Moore & Gillette lokalnie, jeśli chcesz cytować PDF w agencie |
+| `raport.md` | 100 pytań + materiał do Fazy 2 (framework diagnostyczny) |
+| `transkrypcja_film.md` | Transkrypcja filmu poniżej — kontekst do ilustracji w Fazie 2 |
+| `*.pdf` | **Nie w repozytorium** — kup / dodaj własną kopię książki lokalnie |
+
+## Materiały źródłowe (linki)
+
+| Materiał | Link |
+|----------|------|
+| **Książka** — *King, Warrior, Magician, Lover* (Moore & Gillette) | [Empik](https://www.empik.com/king-warrior-magician-lover-moore-robert-gillette-douglas,1470284,ksiazka-p) |
+| **Film** — „jak KURDE być Mężczyzną w XXI w.” (Mosak Marcin) | [YouTube](https://www.youtube.com/watch?v=5nn9Ex3wTIg) |
+
+Model KWML w projekcie opiera się na Moore & Gillette; film jest **uzupełnieniem** (współczesny język, przykłady), nie zamiennikiem książki.
 
 ## Prywatność
 
@@ -94,9 +103,13 @@ ARCHETYPY/
 └── README.md
 ```
 
-## Licencja i materiały źródłowe
+## Prawa autorskie (krótko)
 
-Narzędzie edukacyjno-diagnostyczne oparte na pracach Roberta Moore’a i Douglasa Gillette’a. Książka i materiały wideo pozostają własnością ich autorów — użytkownik dostarcza PDF samodzielnie.
+- **Książka (PDF):** nie jest w repo — kup legalnie (np. Empik) i dodaj PDF lokalnie, jeśli agent ma z niej korzystać.
+- **Film (transkrypcja w repo):** publiczny na YouTube **nie znaczy** publicznej domeny — prawa autorskie nadal ma autor ([Mosak Marcin](https://www.youtube.com/watch?v=5nn9Ex3wTIg)). Transkrypcja to utwór zależny; w repo jest **wyłącznie jako materiał pomocniczy** do narzędzia edukacyjnego, z linkiem do oryginału. To nie jest porada prawna — przy wątpliwościach (fork publiczny, komercja) rozważ sam link do filmu zamiast pełnej transkrypcji lub zgodę autora.
+- **`raport.md`:** framework diagnostyczny w repozytorium (pytania behawioralne); klucz punktowy tylko dla agenta w Fazie 2.
+
+Projekt edukacyjno-diagnostyczny — nie zastępuje książki ani filmu.
 
 ## Autor repozytorium
 
