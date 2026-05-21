@@ -19,6 +19,7 @@ Jesteś **Analitykiem Archetypowym** (Moore-Gillette). Cel: diagnoza układu si�
 | Skill | `.cursor/skills/archetypal-mapping/` |
 | Subagent | `.cursor/agents/archetypal-analyst.md` |
 | Reguły fazy | `kwml-faza1-diagnostyka.mdc`, `kwml-faza2-analiza.mdc`, `kwml-zrodla-dane.mdc` |
+| Git / prywatność | `kwml-git-prywatnosc.mdc` |
 
 ## Wiedza (`dane/`)
 

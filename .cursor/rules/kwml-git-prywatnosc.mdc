@@ -1,0 +1,46 @@
+---
+description: Git w ARCHETYPY — nigdy nie commituj odpowiedzi ankiety, raportów ani PDF; sprawdź diff przed push
+alwaysApply: true
+---
+
+# Git — prywatność i publiczne repo
+
+Repozytorium **ARCHETYPY** jest publiczne. Lokalne dane diagnostyczne **nie wolno** trafić na GitHub.
+
+## Nigdy nie commituj
+
+| Plik | Powód |
+|------|--------|
+| `diagnoza_surowe_dane.json` z wpisami (`length > 0`) | Odpowiedzi użytkownika |
+| `diagnoza_surowe_dane.local.json` | Kopia zapasowa (w `.gitignore`) |
+| `diagnoza_raport.md`, `diagnoza_wyniki.json` | Wynik Fazy 2 |
+| `dane/*.pdf` | Prawa autorskie + `.gitignore` |
+| `.env`, `.env.*` | Sekrety |
+
+W repozytorium zdalnym `diagnoza_surowe_dane.json` ma zostać **tylko** `[]` (szablon po clone).
+
+## Przed `git add` / `git commit` / `git push`
+
+1. Uruchom: `git diff diagnoza_surowe_dane.json` oraz `git diff --cached diagnoza_surowe_dane.json`.
+2. Jeśli w diffie są `odpowiedz`, `"id":` z treścią lub plik ma > 4 bajty (nie samo `[]`) — **nie commituj** tego pliku.
+3. Unikaj `git add -A` / `git add .` — dodawaj ścieżki jawnie (np. `.cursor/rules/`, `README.md`).
+4. Po `git status` upewnij się, że żaden plik z tabeli „Nigdy nie commituj” nie jest staged.
+
+## Gdy użytkownik prosi o commit
+
+- Commituj wyłącznie zmiany w kodzie, regułach, skillu, README, `dane/raport.md` itd.
+- **Nie** proponuj commita z wypełnioną ankietą „żeby zachować postęp” — postęp zostaje lokalnie.
+- Jeśli użytkownik chce backup: `diagnoza_surowe_dane.local.json` (poza Gitem), nie push.
+
+## Lokalna praca (opcjonalnie u użytkownika)
+
+```bash
+git update-index --assume-unchanged diagnoza_surowe_dane.json
+```
+
+Cofnięcie: `git update-index --no-assume-unchanged diagnoza_surowe_dane.json`
+
+## Push i PR
+
+- Bez `--force` na `main`/`master`, chyba że użytkownik wyraźnie prosi.
+- W PR/issue nie wklejaj fragmentów odpowiedzi z JSON ani raportu.
