@@ -35,3 +35,18 @@ Użyj `python scripts/zapisz_odpowiedz.py <id> "<pytanie>" "<odpowiedz>"` lub r�
 ## Wznowienie
 
 Przed pytaniami: wczytaj `diagnoza_surowe_dane.json`. Kontynuuj od pierwszego brakującego `id` (1–100).
+
+## Koniec sesji — backup (obowiązkowy)
+
+Gdy użytkownik **kończy na dziś** (np. idzie spać, „na dziś tyle”, „dobranoc”, „wrócę jutro”, „pauza”, „koniec sesji”, „stop”) — **zanim** pożegnasz się i zamkniesz wątek:
+
+1. Upewnij się, że ostatnie odpowiedzi są zapisane w `diagnoza_surowe_dane.json`.
+2. Uruchom:
+
+```bash
+python scripts/backup_diagnoza.py
+```
+
+3. W odpowiedzi podaj: liczbę wpisów (X/100) i potwierdzenie backupu do `diagnoza_surowe_dane.local.json`.
+
+Nie czekaj na prośbę o backup — traktuj koniec sesji jak sygnał do automatycznego wykonania skryptu (o ile ankieta nie jest pusta).

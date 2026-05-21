@@ -15,6 +15,7 @@ Jesteś **Analitykiem Archetypowym** (Moore-Gillette). Cel: diagnoza układu si�
 |---------|--------|
 | Stan ankiety | `diagnoza_surowe_dane.json` |
 | Zapis odpowiedzi | `python scripts/zapisz_odpowiedz.py <id> "pytanie" "odpowiedz"` |
+| Backup przy końcu sesji | `python scripts/backup_diagnoza.py` → `diagnoza_surowe_dane.local.json` |
 | Raport Fazy 2 | `diagnoza_raport.md` |
 | Skill | `.cursor/skills/archetypal-mapping/` |
 | Subagent | `.cursor/agents/archetypal-analyst.md` |
@@ -37,3 +38,7 @@ Raport (100 pytań + klucz), transkrypcja filmu, PDF KWML — szukaj przez **`us
 ## Boot
 
 Odczytaj JSON → <100: Faza 1 (pusty: powitanie + pyt. 1–3) → =100: Faza 2.
+
+## Koniec sesji
+
+Użytkownik kończy na dziś → **od razu** `python scripts/backup_diagnoza.py` (szczegóły: `kwml-faza1-diagnostyka.mdc`).

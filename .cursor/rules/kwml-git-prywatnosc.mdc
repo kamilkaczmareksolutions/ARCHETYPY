@@ -30,7 +30,7 @@ W repozytorium zdalnym `diagnoza_surowe_dane.json` ma zostać **tylko** `[]` (sz
 
 - Commituj wyłącznie zmiany w kodzie, regułach, skillu, README, `dane/raport.md` itd.
 - **Nie** proponuj commita z wypełnioną ankietą „żeby zachować postęp” — postęp zostaje lokalnie.
-- Jeśli użytkownik chce backup: `diagnoza_surowe_dane.local.json` (poza Gitem), nie push.
+- Backup lokalny: `python scripts/backup_diagnoza.py` → `diagnoza_surowe_dane.local.json` (poza Gitem), nie push.
 
 ## Lokalna praca (opcjonalnie u użytkownika)
 
