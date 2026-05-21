@@ -1,0 +1,17 @@
+# Dane osobowe (nie commituj)
+diagnoza_surowe_dane.local.json
+diagnoza_raport.md
+diagnoza_wyniki.json
+
+# Sekrety
+.env
+.env.*
+
+# Książka PDF — własna kopia użytkownika (prawa autorskie)
+dane/*.pdf
+
+# System / IDE
+.DS_Store
+Thumbs.db
+*.swp
+*~

@@ -1,0 +1,31 @@
+---
+description: Faza 2 — analiza po 100 odpowiedziach: kwadranty, dojrzałość/cień, oscylacja, złoty cień, raport końcowy
+globs: diagnoza_raport*.md
+alwaysApply: false
+---
+
+# Faza 2 — analiza i mapowanie
+
+**Warunek wejścia:** `diagnoza_surowe_dane.json` ma **dokładnie 100** unikalnych wpisów (`id` 1–100).
+
+## Klucz
+
+Użyj **Internal Answer Key** z `dane/raport.md` (lub `.cursor/skills/archetypal-mapping/reference-klucz.md`).  
+Dopiero teraz wolno nazwać archetypy i bieguny cienia.
+
+## Obowiązkowe elementy raportu
+
+1. **Profil kwadrantów** — % energii: Król, Wojownik, Mag, Kochanek.
+2. **Dojrzałość vs cień** — per archetyp: Szczyt dojrzały | Cień aktywny (inflacja) | Cień pasywny (deflacja).
+3. **Oscylacja** — skoki między biegunami tego samego archetypu (np. Tyran ↔ Słabeusz).
+4. **Złoty cień** — gdzie energia jest obecna, lecz zniekształcona; potencjał integracji.
+5. **Mapa** — tabela ASCII lub wykres tekstowy pozycji na mapie dojrzałości.
+
+## Pliki wyjściowe
+
+- `diagnoza_raport.md` — raport narracyjny (PL).
+- Opcjonalnie: `diagnoza_wyniki.json` — struktura liczbowa (procenty, liczniki per biegun).
+
+## Styl Fazy 2
+
+Bez moralnego potępienia. Rekomendacje = kierunki integracji, nie „napraw się”.

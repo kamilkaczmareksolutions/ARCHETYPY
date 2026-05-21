@@ -1,0 +1,26 @@
+---
+description: Jak korzystać z folderu dane/ (raport, transkrypcja, PDF KWML) przy diagnozie archetypowej
+globs: dane/**
+alwaysApply: false
+---
+
+# Źródła w `dane/`
+
+## `raport.md`
+
+- Teoria kwadrantów, tabele cieni, **100 pytań** (bez nazw archetypów w treści pytań).
+- **Klucz odpowiedzi** — wyłącznie Faza 2; nie wklejaj go użytkownikowi podczas ankiety.
+
+## `transkrypcja_film.md`
+
+- Uzupełnienie: ojcostwo, praca, relacje, współczesny kryzys męskości.
+- Używaj do **ilustracji** w raporcie końcowym, nie do zmiany klucza punktowego.
+
+## PDF (Moore & Gillette)
+
+- Definicje piramidy: dojrzały szczyt + dwa bieguny cienia per archetyp.
+- Przy braku ekstrakcji PDF: `search_code` na `dane/` lub zapytaj użytkownika o fragment.
+
+## Wyszukiwanie
+
+Preferuj MCP `user-claude-context` → `search_code` z `path` = absolutna ścieżka `.../ARCHETYPY/dane`.
