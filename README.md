@@ -72,14 +72,19 @@ Backup możesz też odpalić ręcznie w każdej chwili (np. przed aktualizacją 
 | `transkrypcja_film.md` | Transkrypcja filmu poniżej — kontekst do ilustracji w Fazie 2 |
 | `*.pdf` | **Nie w repozytorium** — kup / dodaj własną kopię książki lokalnie |
 
-## Materiały źródłowe (linki)
+## Źródła i atrybucja
 
-| Materiał | Link |
-|----------|------|
-| **Książka** — *King, Warrior, Magician, Lover* (Moore & Gillette) | [Empik](https://www.empik.com/king-warrior-magician-lover-moore-robert-gillette-douglas,1470284,ksiazka-p) |
-| **Film** — „jak KURDE być Mężczyzną w XXI w.” (Mosak Marcin) | [YouTube](https://www.youtube.com/watch?v=5nn9Ex3wTIg) |
+Diagnostyka opiera się na modelu **King, Warrior, Magician, Lover** (Robert Moore, Douglas Gillette).
 
-Model KWML w projekcie opiera się na Moore & Gillette; film jest **uzupełnieniem** (współczesny język, przykłady), nie zamiennikiem książki.
+| Materiał | Autor / wydawca | Gdzie w projekcie |
+|----------|-----------------|-------------------|
+| Książka *King, Warrior, Magician, Lover* | Moore & Gillette — [Empik](https://www.empik.com/king-warrior-magician-lover-moore-robert-gillette-douglas,1470284,ksiazka-p) | PDF **nie** w repo; opcjonalnie własna kopia w `dane/` |
+| Film „jak KURDE być Mężczyzną w XXI w.” | **Mosak Marcin** — [YouTube](https://www.youtube.com/watch?v=5nn9Ex3wTIg) | Transkrypcja: `dane/transkrypcja_film.md` |
+| Raport diagnostyczny (100 pytań) | — | `dane/raport.md` |
+
+**Film:** materiał jest publiczny na YouTube; w repozytorium jest transkrypcja, żeby agent mógł z niej korzystać w Fazie 2 (kontekst, przykłady). Autor, tytuł i link do oryginału są w nagłówku `transkrypcja_film.md` — to uzupełnienie modelu z książki, nie zamiennik.
+
+**Książka:** bez PDF w repo; po sklonowaniu dodajesz legalną kopię lokalnie, jeśli chcesz cytować tekst Moore & Gillette w agencie.
 
 ## Prywatność
 
@@ -102,14 +107,6 @@ ARCHETYPY/
 │   └── agents/archetypal-analyst.md
 └── README.md
 ```
-
-## Prawa autorskie (krótko)
-
-- **Książka (PDF):** nie jest w repo — kup legalnie (np. Empik) i dodaj PDF lokalnie, jeśli agent ma z niej korzystać.
-- **Film (transkrypcja w repo):** publiczny na YouTube **nie znaczy** publicznej domeny — prawa autorskie nadal ma autor ([Mosak Marcin](https://www.youtube.com/watch?v=5nn9Ex3wTIg)). Transkrypcja to utwór zależny; w repo jest **wyłącznie jako materiał pomocniczy** do narzędzia edukacyjnego, z linkiem do oryginału. To nie jest porada prawna — przy wątpliwościach (fork publiczny, komercja) rozważ sam link do filmu zamiast pełnej transkrypcji lub zgodę autora.
-- **`raport.md`:** framework diagnostyczny w repozytorium (pytania behawioralne); klucz punktowy tylko dla agenta w Fazie 2.
-
-Projekt edukacyjno-diagnostyczny — nie zastępuje książki ani filmu.
 
 ## Autor repozytorium
 
