@@ -93,6 +93,8 @@ Gdy użytkownik pyta o **wcześniejsze sesje** („kontynuuj diagnozę”, „na
 2. Wybierz max 5 ID; potem jeden batch `get_observations(ids=[...], project="ARCHETYPY")`.
 3. **Nie** używaj claude-mem do wyszukiwania treści w `dane/` — do tego jest claude-context.
 
+W **Cursorze** to wystarczy na warstwę B. Korpus `archetypy-sessions` (`build_corpus` / `rebuild_corpus`) jest opcjonalny; `query_corpus` wymaga osobnego CLI Claude Code — nie jest potrzebny w IDE. Pełna procedura: `.cursor/rules/kwml-claude-mem.mdc`.
+
 Aktualny stan ankiety zawsze weryfikuj w `diagnoza_surowe_dane.json` (plik ma pierwszeństwo nad pamięcią).
 
 ---

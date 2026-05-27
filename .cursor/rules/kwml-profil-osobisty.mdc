@@ -1,0 +1,25 @@
+---
+description: Pytania o profil użytkownika z ankiety → claude-mem (ADHD, waga, związek, nawyki)
+alwaysApply: true
+---
+
+# Profil osobisty użytkownika (claude-mem)
+
+Gdy użytkownik pyta o **siebie** w kontekście tej diagnostyki lub wcześniejszych odpowiedzi KWML — np.:
+
+- „sprawdź co wiesz o moim ADHD”
+- „ile ważę / jaki mam wzrost”
+- „co wiesz o mojej partnerce”
+- „przypomnij co mówiłem o…”
+
+**Nie proś o powtórzenie** — najpierw odczytaj pamięć:
+
+1. MCP **claude-mem** → `search(query=<temat>, limit≤20, project="ARCHETYPY")`
+2. Brak trafnych obs. (same `P###` / meta)? **Cicho** uruchom:
+   `python scripts/mem_search_profil.py "<temat>"` → JSON z `id` → `get_observations(ids=[...])`
+3. Opcjonalnie powtórz MCP `search` z `"ARCHETYPY profil użytkownika <temat>"`.
+4. Odpowiedz z faktów profilu / pytań (nie z promptów `P###`).
+
+Jeśli nadal pusto: odczytaj `diagnoza_surowe_dane.json`, potem **cicho** `python scripts/sync_diagnoza_to_mem.py --replace --quiet` i ponów search. **Nie** mów użytkownikowi o sync.
+
+**Rozróżnienie:** teoria KWML / brzmienie pytań z ankiety → `user-claude-context` na `dane/`, nie mem.

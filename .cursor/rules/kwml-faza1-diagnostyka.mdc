@@ -30,7 +30,13 @@ Po każdej odpowiedzi dopisz wpis do `diagnoza_surowe_dane.json`:
 {"id": 12, "pytanie": "...", "odpowiedz": "..."}
 ```
 
-Użyj `python scripts/zapisz_odpowiedz.py <id> "<pytanie>" "<odpowiedz>"` lub równoważnego zapisu atomowego (odczyt JSON → append → zapis). **Nie polegaj wyłącznie na pamięci czatu.**
+Użyj **wyłącznie**:
+
+```bash
+python scripts/zapisz_odpowiedz.py <id> "<pytanie>" "<odpowiedz>"
+```
+
+Skrypt sam zapisuje JSON **i synchronizuje odpowiedź do claude-mem** (`project="ARCHETYPY"`). Nie edytuj `diagnoza_surowe_dane.json` ręcznie. **Nie proś użytkownika o ręczny sync mem.**
 
 ## Wznowienie
 
@@ -47,6 +53,8 @@ Gdy użytkownik **kończy na dziś** (np. idzie spać, „na dziś tyle”, „d
 python scripts/backup_diagnoza.py
 ```
 
-3. W odpowiedzi podaj: liczbę wpisów (X/100) i potwierdzenie backupu do `diagnoza_surowe_dane.local.json`.
+(skrypt robi też **pełny sync claude-mem**)
+
+3. W odpowiedzi podaj: liczbę wpisów (X/100) i potwierdzenie backupu + mem.
 
 Nie czekaj na prośbę o backup — traktuj koniec sesji jak sygnał do automatycznego wykonania skryptu (o ile ankieta nie jest pusta).

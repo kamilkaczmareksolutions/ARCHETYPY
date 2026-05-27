@@ -1,0 +1,47 @@
+---
+description: Claude-mem — auto-sync odpowiedzi ARCHETYPY (lokalnie, nie Git)
+globs:
+alwaysApply: false
+---
+
+# Claude-mem — ARCHETYPY
+
+## Git vs mem
+
+| | Ankieta (odpowiedzi osobiste) |
+|--|--|
+| GitHub | **NIE** |
+| `diagnoza_surowe_dane.json` | Źródło prawdy |
+| claude-mem `project="ARCHETYPY"` | **TAK** — auto po zapisie |
+
+## Automatyczna synchronizacja (agent nie pyta użytkownika)
+
+| Zdarzenie | Co się dzieje |
+|-----------|----------------|
+| `zapisz_odpowiedz.py` | Zapis JSON + `sync_diagnoza_to_mem.py --question-id N` |
+| `backup_diagnoza.py` (koniec sesji) | Kopia `.local.json` + `sync --replace` |
+
+Agent **zawsze** używa `zapisz_odpowiedz.py` do zapisu odpowiedzi — **nie** edytuj JSON ręcznie bez sync.
+
+## Pytania o profil użytkownika
+
+Reguła **`kwml-profil-osobisty.mdc`** (alwaysApply): `search` → ewent. `mem_search_profil.py` → `get_observations`.  
+Użytkownik nie musi nic tłumaczyć od zera ani uruchamiać sync ręcznie.
+
+## Boot ankiety
+
+1. JSON → postęp N/100.
+2. Opcjonalnie mem dla kontekstu osobistego.
+3. Przy konflikcie postępu: **JSON wygrywa**.
+
+## Korpusy (opcjonalnie)
+
+- `archetypy-diagnoza` — odpowiedzi (`files: diagnoza_surowe_dane.json`)
+- `archetypy-sessions` — proces (bez JSON)
+
+`query_corpus` wymaga Claude Code CLI; w Cursorze wystarczy `search` + `get_observations`.
+
+## Zakazy
+
+- Nie commituj wypełnionego JSON.
+- Nie szukaj Internal Answer Key w `dane/` przez mem.

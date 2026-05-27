@@ -59,10 +59,10 @@ python scripts/backup_diagnoza.py
 
 Backup możesz też odpalić ręcznie w każdej chwili (np. przed aktualizacją systemu).
 
-## MCP (opcjonalnie, zalecane)
+## MCP (zalecane)
 
-- **claude-context** — semantyczne wyszukiwanie w `dane/` (pytania, teoria) zamiast wczytywania całych plików.
-- **claude-mem** — pamięć między sesjami (`project="ARCHETYPY"`). Stan ankiety i tak ma pierwszeństwo w **`diagnoza_surowe_dane.json`**.
+- **claude-context** — wyszukiwanie w `dane/` (pytania, teoria).
+- **claude-mem** — Twoje odpowiedzi z ankiety trafiają do pamięci **automatycznie** przy `zapisz_odpowiedz.py` i `backup_diagnoza.py` (lokalnie, nie na Git). Potem możesz napisać np. *„sprawdź co wiesz o moim ADHD”* — agent odpytuje mem (`project="ARCHETYPY"`). Reguły: [`kwml-profil-osobisty.mdc`](.cursor/rules/kwml-profil-osobisty.mdc), [`kwml-claude-mem.mdc`](.cursor/rules/kwml-claude-mem.mdc). Postęp ankiety: nadal **`diagnoza_surowe_dane.json`**.
 
 ## Folder `dane/`
 
